@@ -52,7 +52,7 @@ const Header = () => {
               <SheetContent>
                 <SheetHeader>
                   <SheetTitle>Links</SheetTitle>
-                  <div className="flex flex-col gap-3 pt-3">
+                  <div className="flex flex-col gap-5 pt-6">
                     {links.map((link) => (
                       <Link
                         className={cn(

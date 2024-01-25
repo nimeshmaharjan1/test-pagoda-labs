@@ -40,7 +40,7 @@ const QuestionFour = () => {
         </CardContent>
         <CardFooter className="flex flex-col md:flex-row gap-3 md:gap-0 md:justify-between">
           <Button onClick={handleSubmit}>Get Top 3 Hashtags</Button>
-          {hashtags.length && (
+          {hashtags.length > 0 && (
             <ul className="ml-6 list-disc [&>li]:mt-2">
               {hashtags.map((i, _) => (
                 <li key={_}>{i}</li>

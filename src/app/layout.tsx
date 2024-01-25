@@ -42,7 +42,7 @@ export default function RootLayout({
             <section className="container py-4 flex items-center justify-between">
               <p className="font-semibold">Nimesh Maharjan</p>
               <div className="flex items-center gap-2">
-                <Link href="https://github.com/nimeshmaharjan1">
+                <Link href="https://github.com/nimeshmaharjan1/test-pagoda-labs">
                   <Button size={"icon"} variant={"outline"}>
                     <Github className="w-4 h-4"></Github>
                   </Button>
