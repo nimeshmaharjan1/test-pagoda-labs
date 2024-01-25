@@ -54,18 +54,19 @@ const Header = () => {
                   <SheetTitle>Links</SheetTitle>
                   <div className="flex flex-col gap-5 pt-6">
                     {links.map((link) => (
-                      <Link
-                        className={cn(
-                          "transition-colors capitalize hover:text-foreground/80",
-                          pathname === `/${link}`
-                            ? "text-foreground"
-                            : "text-foreground/60"
-                        )}
-                        key={link}
-                        href={link}
-                      >
-                        {link}
-                      </Link>
+                      <SheetTrigger asChild key={link}>
+                        <Link
+                          className={cn(
+                            "transition-colors capitalize hover:text-foreground/80",
+                            pathname === `/${link}`
+                              ? "text-foreground"
+                              : "text-foreground/60"
+                          )}
+                          href={link}
+                        >
+                          {link}
+                        </Link>
+                      </SheetTrigger>
                     ))}
                   </div>
                 </SheetHeader>
