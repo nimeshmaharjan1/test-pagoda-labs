@@ -43,7 +43,7 @@ export default function QuestionSixPage(): JSX.Element {
     setTimer(60);
     setHasClicked(false);
   };
-
+  console.log({ flippedCards, matchedCards });
   const updateActiveCards = (i: number) => {
     if (!flippedCards.includes(i) && !matchedCards.includes(i)) {
       if (flippedCards.length === 0 && timer === 60) {
