@@ -1,25 +1,13 @@
-"use client";
-import { ModeToggle } from "@/components/theme-toggle";
-import { Button } from "@/components/ui/button";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import { cn } from "@/lib/utils";
-import { AlignJustify } from "lucide-react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+'use client';
+import { ModeToggle } from '@/components/theme-toggle';
+import { Button } from '@/components/ui/button';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import { cn } from '@/lib/utils';
+import { AlignJustify } from 'lucide-react';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
-const links = [
-  "question-one",
-  "question-two",
-  "question-three",
-  "question-four",
-  "question-five",
-];
+const links = ['question-one', 'question-two', 'question-three', 'question-four', 'question-five', 'question-six'];
 const Header = () => {
   const pathname = usePathname();
   return (
@@ -30,14 +18,11 @@ const Header = () => {
             {links.map((link) => (
               <Link
                 className={cn(
-                  "transition-colors capitalize hover:text-foreground/80",
-                  pathname === `/${link}`
-                    ? "text-foreground"
-                    : "text-foreground/60"
+                  'transition-colors capitalize hover:text-foreground/80',
+                  pathname === `/${link}` ? 'text-foreground' : 'text-foreground/60'
                 )}
                 key={link}
-                href={link}
-              >
+                href={link}>
                 {link}
               </Link>
             ))}
@@ -45,7 +30,7 @@ const Header = () => {
           <div className="block lg:hidden">
             <Sheet>
               <SheetTrigger asChild>
-                <Button variant={"outline"} size={"icon"}>
+                <Button variant={'outline'} size={'icon'}>
                   <AlignJustify />
                 </Button>
               </SheetTrigger>
@@ -57,13 +42,10 @@ const Header = () => {
                       <SheetTrigger asChild key={link}>
                         <Link
                           className={cn(
-                            "transition-colors capitalize hover:text-foreground/80",
-                            pathname === `/${link}`
-                              ? "text-foreground"
-                              : "text-foreground/60"
+                            'transition-colors capitalize hover:text-foreground/80',
+                            pathname === `/${link}` ? 'text-foreground' : 'text-foreground/60'
                           )}
-                          href={link}
-                        >
+                          href={link}>
                           {link}
                         </Link>
                       </SheetTrigger>
